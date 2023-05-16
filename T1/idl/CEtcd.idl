@@ -1,0 +1,21 @@
+/**
+ * GRUPO:
+ * Eduardo Klein Nakatani
+ * Marco Aurélio Silva de Souza Júnior
+ */
+
+exception InvalidKey {};
+
+    interface CEtcd {
+
+        // atributos
+        //readonly attribute string id_;
+
+        //operações
+        //string id();
+        void put(in string key, in string val);
+        string get(in string key) raises (InvalidKey);
+        void del(in string key) raises (InvalidKey);
+        void shutdown(in string password);
+    };
+
